@@ -1,0 +1,79 @@
+# PUDO Packages Dimensions API
+
+## Prerequisites
+
+- Node.js (v14 or later)
+- Vercel CLI (optional, but recommended)
+
+## Local Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file with the following variables:
+   ```
+   PORT=3000
+   NODE_ENV=development
+   PRESTO_USERNAME=your_username
+   PRESTO_PASSWORD=your_password
+   PRESTO_HOST=us.presto-secure.data-infra.shopee.io
+   PRESTO_PORT=443
+   PRESTO_PROTOCOL=https
+   ```
+
+4. Run the application:
+   ```bash
+   npm run dev  # For development
+   npm start    # For production
+   ```
+
+## Vercel Deployment
+
+### Manual Deployment
+1. Install Vercel CLI:
+   ```bash
+   npm i -g vercel
+   ```
+
+2. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+
+3. Deploy:
+   ```bash
+   vercel
+   ```
+
+### Environment Variables on Vercel
+Set the following secrets:
+```bash
+vercel secrets add presto_username your_username
+vercel secrets add presto_password your_password
+vercel secrets add presto_host us.presto-secure.data-infra.shopee.io
+vercel secrets add presto_port 443
+vercel secrets add presto_protocol https
+```
+
+## API Endpoints
+
+- `GET /api/pudos-ativos`: Retrieve active PUDOs
+- `GET /api/recent-history`: Get recent package history
+- `GET /api/live-data`: Fetch current live data
+- `GET /api/filter`: Filter data with query parameters
+  - Query params: `state`, `city`, `dopId`, `dataType`
+
+## Troubleshooting
+
+- Ensure all environment variables are correctly set
+- Check network connectivity to Presto database
+- Verify Vercel secret configurations match your credentials
+
+## Security Notes
+
+- Never commit sensitive credentials to version control
+- Use environment variables and Vercel secrets
+- Rotate credentials periodically

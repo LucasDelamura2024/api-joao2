@@ -1,0 +1,23 @@
+{
+    "name": "pudo-packages-dimensions-api",
+    "version": "1.0.0",
+    "description": "API for PUDO Packages Dimensions tracking",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "dev": "nodemon index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["pudo", "packages", "logistics", "api"],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "moment-timezone": "^0.5.43",
+      "presto-client": "^0.6.1"
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.1"
+    }
+  }

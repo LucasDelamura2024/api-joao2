@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "name": "pudo-packages-dimensions-api",
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "index.js"
+      }
+    ],
+    "env": {
+      "PRESTO_USERNAME": "@presto_username",
+      "PRESTO_PASSWORD": "@presto_password",
+      "PRESTO_HOST": "@presto_host",
+      "PRESTO_PORT": "@presto_port",
+      "PRESTO_PROTOCOL": "@presto_protocol"
+    },
+    "regions": ["gru1"],
+    "github": {
+      "enabled": true,
+      "silent": false
+    }
+  }
