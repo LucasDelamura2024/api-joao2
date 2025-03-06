@@ -14,11 +14,12 @@
       }
     ],
     "env": {
-      "PRESTO_USERNAME": "@presto_username",
-      "PRESTO_PASSWORD": "@presto_password",
-      "PRESTO_HOST": "@presto_host",
-      "PRESTO_PORT": "@presto_port",
-      "PRESTO_PROTOCOL": "@presto_protocol"
+      "PRESTO_USERNAME": "joao.armani",
+      "PRESTO_PASSWORD": "1G1W835QQN7a",
+      "PRESTO_HOST": "us.presto-secure.data-infra.shopee.io",
+      "PRESTO_PORT": "443",
+      "PRESTO_PROTOCOL": "https",
+      "NODE_ENV": "production"
     },
     "regions": ["gru1"],
     "github": {
